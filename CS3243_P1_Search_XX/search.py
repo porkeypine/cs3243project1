@@ -87,24 +87,72 @@ def depthFirstSearch(problem):
     print "Is the start a goal?", problem.isGoalState(problem.getStartState())
     print "Start's successors:", problem.getSuccessors(problem.getStartState())
     """
-    "*** YOUR CODE HERE ***"
+    from util import Stack
     print("Type of problem", problem)
     print "Start:", problem.getStartState()
     print "Is the start a goal?", problem.isGoalState(problem.getStartState())
     print "Start's successors:", problem.getSuccessors(problem.getStartState())
-    frontier = problem.getSuccessors(problem.getStartState())
     # [((5, 4), 'South', 1), ((4, 5), 'West', 1)] for initial state.
-    explored = None
-    from game import Directions
-    s = Directions.SOUTH
-    w = Directions.WEST
-    return [s, s, w, s, w, w, s]
+
+    # Perform DFS in a iterative process
+    # Explored set of values
+
+    explored = set() # Explored States of the Pacman graph
+    stack = Stack()
+    # Store current position and state and previous actions
+    # Start State is in Explored Set by default.
+    stack.push([problem.getStartState(),[]])
+    while not stack.isEmpty():
+        # represents current state of agent
+        state, actions = stack.pop()
+
+        if problem.isGoalState(state):
+            return actions
+        # When a element is poped from the stack, it is known to be first explored
+        explored.add(state)
+        for nxt_state, action, _ in problem.getSuccessors(state):
+            if nxt_state in explored:
+                continue
+            else:
+                stack.push([nxt_state, actions + [action]])
+
+    # If problem is known to be unsolvable return a empty action set.
+    return []
 
 
 def breadthFirstSearch(problem):
     """Search the shallowest nodes in the search tree first."""
-    "*** YOUR CODE HERE ***"
-    util.raiseNotDefined() # REMOVE THIS ONCE YOU IMPLEMENTED YOUR CODE
+    from util import Queue
+    print("Type of problem", problem)
+    print "Start:", problem.getStartState()
+    print "Is the start a goal?", problem.isGoalState(problem.getStartState())
+    print "Start's successors:", problem.getSuccessors(problem.getStartState())
+    # [((5, 4), 'South', 1), ((4, 5), 'West', 1)] for initial state.
+
+    # Perform DFS in a iterative process
+    # Explored set of values
+
+    explored = set() # Explored States of the Pacman graph
+    queue = Queue()
+    # Store current position and state and previous actions
+    # Start State is in Explored Set by default.
+    queue.push([problem.getStartState(),[]])
+    while not queue.isEmpty():
+        # represents current state of agent
+        state, actions = queue.pop()
+
+        if problem.isGoalState(state):
+            return actions
+        # When a element is poped from the stack, it is known to be first explored
+        explored.add(state)
+        for nxt_state, action, _ in problem.getSuccessors(state):
+            if nxt_state in explored:
+                continue
+            else:
+                queue.push([nxt_state, actions + [action]])
+
+    # If problem is known to be unsolvable return a empty action set.
+    return []
 
 def uniformCostSearch(problem):
     """Search the node of least total cost first."""

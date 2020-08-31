@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8722270f-6be6-4546-b287-880f43aba18c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/search.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.sh" beforeDir="false" afterPath="$PROJECT_DIR$/test.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VERSION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../autograder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bigCorners.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bigMaze.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bigSafeSearch.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bigSearch.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../boxSearch.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../capsuleClassic.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../commands.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contestClassic.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../contoursMaze.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../eightpuzzle.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../game.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ghostAgents.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../grading.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graphicsDisplay.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../graphicsUtils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../greedySearch.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../keyboardAgents.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mediumClassic.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mediumCorners.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mediumDottedMaze.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mediumMaze.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mediumSafeSearch.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mediumScaryMaze.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mediumSearch.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../minimaxClassic.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../oddSearch.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openClassic.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openMaze.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openSearch.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../originalClassic.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pacman.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pacmanAgents.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../powerClassic.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../projectParams.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../search.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../searchAgents.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../searchTestClasses.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smallClassic.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smallMaze.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smallSafeSearch.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../smallSearch.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../submission_autograder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testClasses.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testClassic.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testMaze.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testParser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testSearch.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../textDisplay.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tinyCorners.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tinyMaze.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tinySafeSearch.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tinySearch.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trappedClassic.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trickyClassic.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../trickySearch.lay" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../util.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JupyterTrust" id="43de8d2f-736b-4ba0-bdd0-2c89b622cda6" />
+  <component name="ProjectId" id="1giA371ueBgvbtok8HPnFaaX6wK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Test" type="ShConfigurationType">
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/test.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/zsh" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8722270f-6be6-4546-b287-880f43aba18c" name="Default Changelist" comment="" />
+      <created>1598586838944</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1598586838944</updated>
+      <workItem from="1598586840387" duration="2178000" />
+      <workItem from="1598682565243" duration="70000" />
+      <workItem from="1598682661699" duration="53000" />
+      <workItem from="1598682758049" duration="4390000" />
+      <workItem from="1598689335510" duration="3698000" />
+      <workItem from="1598860341308" duration="3915000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1864" y="202" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598683099239">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1864" y="202" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1598683099239" />
+    <state x="2188" y="302" key="FileChooserDialogImpl" timestamp="1598682859687">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2188" y="302" key="FileChooserDialogImpl/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1598682859687" />
+    <state x="1909" y="179" key="SettingsEditor" timestamp="1598682712412">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1909" y="179" key="SettingsEditor/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1598682712412" />
+  </component>
+</project>
