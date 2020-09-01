@@ -114,6 +114,8 @@ def depthFirstSearch(problem):
             # Prune new states that have already been explored
             if nxt_state in explored:
                 continue
+            elif problem.isGoalState(nxt_state):
+                return actions + [action]
             else:
                 stack.push([nxt_state, actions + [action]])
 
