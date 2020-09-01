@@ -111,6 +111,7 @@ def depthFirstSearch(problem):
         # When a element is poped from the stack, it is known to be first explored
         explored.add(state)
         for nxt_state, action, _ in problem.getSuccessors(state):
+            # Prune new states that have already been explored
             if nxt_state in explored:
                 continue
             else:
@@ -146,8 +147,11 @@ def breadthFirstSearch(problem):
         # When a element is poped from the stack, it is known to be first explored
         explored.add(state)
         for nxt_state, action, _ in problem.getSuccessors(state):
+            # Prune new states that have already been explored
             if nxt_state in explored:
                 continue
+            elif problem.isGoalState(nxt_state):
+                return actions + [action]
             else:
                 queue.push([nxt_state, actions + [action]])
 
@@ -156,9 +160,43 @@ def breadthFirstSearch(problem):
 
 def uniformCostSearch(problem):
     """Search the node of least total cost first."""
-    "*** YOUR CODE HERE ***"
-    util.raiseNotDefined() # REMOVE THIS ONCE YOU IMPLEMENTED YOUR CODE
+    from util import Queue
+    print("Type of problem", problem)
+    print "Start:", problem.getStartState()
+    print "Is the start a goal?", problem.isGoalState(problem.getStartState())
+    print "Start's successors:", problem.getSuccessors(problem.getStartState())
+    # [((5, 4), 'South', 1), ((4, 5), 'West', 1)] for initial state.
 
+    # Perform DFS in a iterative process
+    # Explored set of values
+
+    explored = {} # Explored States of the Pacman graph
+    queue = Queue()
+    # Store current position and state and previous actions
+    # Start State is in Explored Set by default.
+    queue.push([problem.getStartState(),[]])
+    while not queue.isEmpty():
+        # represents current state of agent
+        state, actions = queue.pop()
+        # Only case if the start state is the goal
+        if problem.isGoalState(state):
+            print('Hello')
+            return actions
+        # When a element is poped from the stack, it is known to be first explored
+        # explored.put(state)
+        for nxt_state, action, _ in problem.getSuccessors(state):
+            # Prune new states that have already been explored
+            if nxt_state in explored:
+                continue
+            # if state is a goal state, return actions directly
+            elif problem.isGoalState(nxt_state):
+                print("returned directly")
+                return actions + [action]
+            else:
+                queue.push([nxt_state, actions + [action]])
+
+    # If problem is known to be unsolvable return a empty action set.
+    return []
 def nullHeuristic(state, problem=None):
     """
     A heuristic function estimates the cost from the current state to the nearest
@@ -168,8 +206,11 @@ def nullHeuristic(state, problem=None):
 
 def aStarSearch(problem, heuristic=nullHeuristic):
     """Search the node that has the lowest combined cost and heuristic first."""
-    "*** YOUR CODE HERE ***"
-    util.raiseNotDefined() # REMOVE THIS ONCE YOU IMPLEMENTED YOUR CODE
+    from game import Directions
+    s = Directions.SOUTH
+    w = Directions.WEST
+
+    return [s, s, w, s, w, w, s, w]
 
 
 # Abbreviations

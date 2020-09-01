@@ -20,68 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8722270f-6be6-4546-b287-880f43aba18c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/search.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.sh" beforeDir="false" afterPath="$PROJECT_DIR$/test.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VERSION" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../autograder.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bigCorners.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bigMaze.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bigSafeSearch.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../bigSearch.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../boxSearch.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../capsuleClassic.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../commands.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../contestClassic.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../contoursMaze.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eightpuzzle.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../game.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ghostAgents.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../grading.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../graphicsDisplay.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../graphicsUtils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../greedySearch.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../keyboardAgents.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../layout.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mediumClassic.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mediumCorners.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mediumDottedMaze.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mediumMaze.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mediumSafeSearch.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mediumScaryMaze.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mediumSearch.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../minimaxClassic.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../oddSearch.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../openClassic.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../openMaze.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../openSearch.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../originalClassic.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pacman.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pacmanAgents.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../powerClassic.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../projectParams.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../search.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../searchAgents.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../searchTestClasses.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smallClassic.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smallMaze.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smallSafeSearch.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../smallSearch.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../submission_autograder.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../testClasses.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../testClassic.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../testMaze.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../testParser.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../testSearch.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../textDisplay.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tinyCorners.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tinyMaze.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tinySafeSearch.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tinySearch.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trappedClassic.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trickyClassic.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../trickySearch.lay" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../util.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +71,7 @@
       <workItem from="1598682661699" duration="53000" />
       <workItem from="1598682758049" duration="4390000" />
       <workItem from="1598689335510" duration="3698000" />
-      <workItem from="1598860341308" duration="3915000" />
+      <workItem from="1598860341308" duration="5950000" />
     </task>
     <servers />
   </component>
