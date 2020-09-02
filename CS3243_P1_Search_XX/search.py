@@ -87,17 +87,17 @@ def depthFirstSearch(problem):
     print "Is the start a goal?", problem.isGoalState(problem.getStartState())
     print "Start's successors:", problem.getSuccessors(problem.getStartState())
     """
-    from util import Stack
-    print("Type of problem", problem)
-    print "Start:", problem.getStartState()
-    print "Is the start a goal?", problem.isGoalState(problem.getStartState())
-    print "Start's successors:", problem.getSuccessors(problem.getStartState())
+    from util import Stack,Counter
+    # print("Type of problem", problem)
+    # print "Start:", problem.getStartState()
+    # print "Is the start a goal?", problem.isGoalState(problem.getStartState())
+    # print "Start's successors:", problem.getSuccessors(problem.getStartState())
     # [((5, 4), 'South', 1), ((4, 5), 'West', 1)] for initial state.
 
     # Perform DFS in a iterative process
     # Explored set of values
 
-    explored = set() # Explored States of the Pacman graph
+    explored = Counter() # Explored States of the Pacman graph
     stack = Stack()
     # Store current position and state and previous actions
     # Start State is in Explored Set by default.
@@ -105,19 +105,17 @@ def depthFirstSearch(problem):
     while not stack.isEmpty():
         # represents current state of agent
         state, actions = stack.pop()
-
         if problem.isGoalState(state):
             return actions
-        # When a element is poped from the stack, it is known to be first explored
-        explored.add(state)
-        for nxt_state, action, _ in problem.getSuccessors(state):
-            # Prune new states that have already been explored
-            if nxt_state in explored:
-                continue
-            elif problem.isGoalState(nxt_state):
-                return actions + [action]
-            else:
-                stack.push([nxt_state, actions + [action]])
+        if not explored[state]:
+            # When a element is poped from the stack, it is known to be first explored
+            explored[state] = 1
+            for nxt_state, action, _ in problem.getSuccessors(state):
+                # Prune new states that have already been explored
+                if explored[nxt_state] != 0:
+                    continue
+                else:
+                    stack.push([nxt_state, actions + [action]])
 
     # If problem is known to be unsolvable return a empty action set.
     return []
@@ -126,10 +124,10 @@ def depthFirstSearch(problem):
 def breadthFirstSearch(problem):
     """Search the shallowest nodes in the search tree first."""
     from util import Queue
-    print("Type of problem", problem)
-    print "Start:", problem.getStartState()
-    print "Is the start a goal?", problem.isGoalState(problem.getStartState())
-    print "Start's successors:", problem.getSuccessors(problem.getStartState())
+    # print("Type of problem", problem)
+    # print "Start:", problem.getStartState()
+    # print "Is the start a goal?", problem.isGoalState(problem.getStartState())
+    # print "Start's successors:", problem.getSuccessors(problem.getStartState())
     # [((5, 4), 'South', 1), ((4, 5), 'West', 1)] for initial state.
 
     # Perform DFS in a iterative process
@@ -143,7 +141,8 @@ def breadthFirstSearch(problem):
     while not queue.isEmpty():
         # represents current state of agent
         state, actions = queue.pop()
-
+        if state in explored:
+            continue
         if problem.isGoalState(state):
             return actions
         # When a element is poped from the stack, it is known to be first explored
@@ -152,8 +151,6 @@ def breadthFirstSearch(problem):
             # Prune new states that have already been explored
             if nxt_state in explored:
                 continue
-            elif problem.isGoalState(nxt_state):
-                return actions + [action]
             else:
                 queue.push([nxt_state, actions + [action]])
 
@@ -162,40 +159,36 @@ def breadthFirstSearch(problem):
 
 def uniformCostSearch(problem):
     """Search the node of least total cost first."""
-    from util import PriorityQueue
-    print("Type of problem", problem)
-    print "Start:", problem.getStartState()
-    print "Is the start a goal?", problem.isGoalState(problem.getStartState())
-    print "Start's successors:", problem.getSuccessors(problem.getStartState())
-    # [((5, 4), 'South', 1), ((4, 5), 'West', 1)] for initial state.
-    # Explored set of values
+    from util import PriorityQueue,Counter
     # Keys: Explored States of the Pacman graph, Values: Minimum Cost of the State path
-    explored = {}
+    explored = Counter()
     # X: Node, Y: Current Path Cost -- Not Necessary
     # relaxation = lambda x, y: explored[x]
     priorityQueue = PriorityQueue()
     # Store current position and state and previous actions
     # Start State is in Explored Set by default.
     # Data Structure List Stores: Curr node, Predecessors, Cost to reach node
-    priorityQueue.push([problem.getStartState(), [], 0],0)
+    startNode = problem.getStartState()
+    priorityQueue.push([startNode, [], 0],0)
     while not priorityQueue.isEmpty():
         # represents current state of agent
         state, actions, cost = priorityQueue.pop()
-
         if problem.isGoalState(state):
             return actions
         # When a element is poped from the Priority Queue,
         # it is known to be of true cost from source to the node
-        explored[state] = cost
-        for nxt_state, action, nextCost in problem.getSuccessors(state):
-            # Prune new states that have already been known to have SP
-            if nxt_state in explored:
-                continue
-            else:
-                priorityQueue.update([nxt_state, actions + [action], cost+nextCost], cost+nextCost)
+        if not explored[state]:
+            # + 1 as the cost is said to be 0 for initial which causes implementation issues
+            explored[state] = cost + 1
+            for nxt_state, action, nextCost in problem.getSuccessors(state):
+                # Prune new states that have already been known to have SP
+                if not explored[nxt_state]:
+                    priorityQueue.update([nxt_state, actions + [action],
+                                          cost+nextCost], cost+nextCost)
 
     # If problem is known to be unsolvable return a empty action set.
     return []
+
 def nullHeuristic(state, problem=None):
     """
     A heuristic function estimates the cost from the current state to the nearest
@@ -205,14 +198,14 @@ def nullHeuristic(state, problem=None):
 
 def aStarSearch(problem, heuristic=nullHeuristic):
     """Search the node that has the lowest combined cost and heuristic first."""
-    from util import PriorityQueue
-    print("Type of problem", problem)
-    print "Start:", problem.getStartState()
-    print "Is the start a goal?", problem.isGoalState(problem.getStartState())
-    print "Start's successors:", problem.getSuccessors(problem.getStartState())
+    from util import PriorityQueue,Counter
+    # print("Type of problem", problem)
+    # print "Start:", problem.getStartState()
+    # print "Is the start a goal?", problem.isGoalState(problem.getStartState())
+    # print "Start's successors:", problem.getSuccessors(problem.getStartState())
     # [((5, 4), 'South', 1), ((4, 5), 'West', 1)] for initial state.
     # Keys: Explored States of the Pacman graph, Values: Minimum Cost of the State path
-    explored = {}
+    explored = Counter()
     # X: Node, Y: Current Path Cost -- Not Necessary
     # lambda to calculate estimated Global Cost of A*
     estGlobalCost = lambda state, c : c + heuristic(state,problem)
@@ -229,14 +222,14 @@ def aStarSearch(problem, heuristic=nullHeuristic):
             return actions
         # When a element is poped from the Priority Queue,
         # it is known to be of true cost from source to the node
-        explored[state] = cost
-        for nxt_state, action, nextCost in problem.getSuccessors(state):
-            # Prune new states that have already been known to have SP
-            if nxt_state in explored:
-                continue
-            else:
-                priorityQueue.update([nxt_state, actions + [action], cost + nextCost], estGlobalCost(nxt_state, cost+ nextCost))
-
+        if not explored[state]:
+            # + 1 as the cost is said to be 0 for initial which causes implementation issues
+            explored[state] = cost + 1
+            for nxt_state, action, nextCost in problem.getSuccessors(state):
+                # Prune new states that have already been known to have SP
+                if not explored[nxt_state]:
+                    priorityQueue.update([nxt_state, actions + [action],cost + nextCost],
+                                         estGlobalCost(nxt_state,cost + nextCost))
     # If problem is known to be unsolvable return a empty action set.
     return []
 
