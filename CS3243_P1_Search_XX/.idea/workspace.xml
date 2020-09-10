@@ -20,10 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8722270f-6be6-4546-b287-880f43aba18c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/search.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/searchAgents.py" beforeDir="false" afterPath="$PROJECT_DIR$/searchAgents.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.sh" beforeDir="false" afterPath="$PROJECT_DIR$/test.sh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +73,7 @@
       <workItem from="1598860341308" duration="6272000" />
       <workItem from="1599064133608" duration="1264000" />
       <workItem from="1599066006024" duration="943000" />
-      <workItem from="1599719017354" duration="5789000" />
+      <workItem from="1599719017354" duration="6091000" />
     </task>
     <servers />
   </component>
@@ -94,6 +92,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="1864" y="202" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598683099239">
       <screen x="1440" y="0" width="1920" height="1080" />
@@ -103,6 +105,14 @@
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2188" y="302" key="FileChooserDialogImpl/0.0.1440.900/1440.0.1920.1080@1440.0.1920.1080" timestamp="1598682859687" />
+    <state x="144" y="79" key="MergeDialog" timestamp="1599729233542">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="144" y="79" key="MergeDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599729233542" />
+    <state x="358" y="218" key="MultipleFileMergeDialog" timestamp="1599729233585">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="358" y="218" key="MultipleFileMergeDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1599729233585" />
     <state x="1909" y="179" key="SettingsEditor" timestamp="1598682712412">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
