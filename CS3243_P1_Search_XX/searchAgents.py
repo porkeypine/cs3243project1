@@ -303,7 +303,6 @@ class CornersProblem(search.SearchProblem):
         """
         "*** YOUR CODE HERE ***"
         # util.raiseNotDefined() # REMOVE THIS ONCE YOU IMPLEMENTED YOUR CODE
-        print(set(self.corners))
         return (tuple(self.startingPosition), ())
         
     def isGoalState(self, state):
@@ -341,7 +340,6 @@ class CornersProblem(search.SearchProblem):
                 continue
             else:
                 if (nextx, nexty) in set(self.corners):
-                    print(state[1])
                     nextStateCorners = ((nextx, nexty),)
                     for corner in state[1]:
                         if corner not in nextStateCorners:
@@ -368,6 +366,9 @@ class CornersProblem(search.SearchProblem):
 
 
 def cornersHeuristic(state, problem):
+    from util import manhattanDistance
+    import itertools
+
     """
     A heuristic for the CornersProblem that you defined.
 
@@ -384,7 +385,30 @@ def cornersHeuristic(state, problem):
     walls = problem.walls # These are the walls of the maze, as a Grid (game.py)
 
     "*** YOUR CODE HERE ***"
-    return 0 # Default to trivial solution
+    currentPos = state[0]
+    visitedCorners = state[1]
+
+    unvisitedCorners = []
+    for corner in corners:
+        if corner not in visitedCorners:
+            unvisitedCorners.append(corner)
+
+    if not unvisitedCorners:
+        # all visited
+        return 0
+
+    h = 0
+    permsUnvisitedCorners = list(itertools.permutations(unvisitedCorners))
+    numberUnvisited = len(unvisitedCorners)
+
+    for perm in permsUnvisitedCorners:
+        manDist = manhattanDistance(currentPos, perm[0])
+        for i in range(0, numberUnvisited - 1):
+            manDist += manhattanDistance(perm[i], perm[i+1])
+        if (h == 0) or (manDist < h):
+            h = manDist
+        
+    return h
 
 class AStarCornersAgent(SearchAgent):
     "A SearchAgent for FoodSearchProblem using A* and your foodHeuristic"

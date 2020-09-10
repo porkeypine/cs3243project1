@@ -194,7 +194,7 @@ def uniformCostSearch(problem):
     return []
     '''
 
-    Search the node of least total cost first.
+    # Search the node of least total cost first.
     from util import PriorityQueue,Counter
     # Keys: Explored States of the Pacman graph, Values: Minimum Cost of the State path
     explored = Counter()
