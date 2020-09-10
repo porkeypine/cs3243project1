@@ -295,6 +295,9 @@ class CornersProblem(search.SearchProblem):
         # p2: (g0, g1)
         # p3: (g1, g2)
         # p4: (g2, g3)
+        # For display purposes
+        self._visited, self._visitedlist, self._expanded = {}, [], 0 # DO NOT CHANGE
+
 
     def getStartState(self):
         """
@@ -303,7 +306,6 @@ class CornersProblem(search.SearchProblem):
         """
         "*** YOUR CODE HERE ***"
         # util.raiseNotDefined() # REMOVE THIS ONCE YOU IMPLEMENTED YOUR CODE
-        print(set(self.corners))
         return (tuple(self.startingPosition), ())
         
     def isGoalState(self, state):
@@ -339,18 +341,21 @@ class CornersProblem(search.SearchProblem):
 
             if hitsWall:
                 continue
+
+            if (nextx, nexty) in set(self.corners):
+                nextStateCorners = ((nextx, nexty),)
+                for corner in state[1]:
+                    if corner not in nextStateCorners:
+                        nextStateCorners += (corner,)
+                successors.append( (((nextx, nexty), nextStateCorners), action, 1) )
             else:
-                if (nextx, nexty) in set(self.corners):
-                    print(state[1])
-                    nextStateCorners = ((nextx, nexty),)
-                    for corner in state[1]:
-                        if corner not in nextStateCorners:
-                            nextStateCorners += (corner,)
-                    successors.append( (((nextx, nexty), nextStateCorners), action, 1) )
-                else:
-                    successors.append( (((nextx, nexty), state[1]), action, 1) )
+                successors.append( (((nextx, nexty), state[1]), action, 1) )
 
         self._expanded += 1 # DO NOT CHANGE
+        if state not in self._visited:
+            self._visited[state] = True
+            self._visitedlist.append(state)
+
         return successors # DO NOT CHANGE
 
     def getCostOfActions(self, actions):
@@ -380,11 +385,22 @@ def cornersHeuristic(state, problem):
     shortest path from the state to a goal of the problem; i.e.  it should be
     admissible (as well as consistent).
     """
-    corners = problem.corners # These are the corner coordinates
+    from util import manhattanDistance
+    corners = set(problem.corners) # These are the corner coordinates
     walls = problem.walls # These are the walls of the maze, as a Grid (game.py)
-
-    "*** YOUR CODE HERE ***"
-    return 0 # Default to trivial solution
+    curr_position = state[0]
+    unvisited = corners - set(state[1])
+    from itertools import permutations
+    setOfHypothesis = permutations(unvisited)
+    bestVal = 10**100
+    for hypothesis in setOfHypothesis:
+        accum = 0
+        psn = curr_position
+        for corner in hypothesis:
+            accum += manhattanDistance(psn,corner)
+            psn = corner
+        bestVal = min(accum, bestVal)
+    return bestVal if not bestVal == 10**100 else 0
 
 class AStarCornersAgent(SearchAgent):
     "A SearchAgent for FoodSearchProblem using A* and your foodHeuristic"

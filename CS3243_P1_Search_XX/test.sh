@@ -18,7 +18,9 @@
 #Formulate a Search problem
 #python pacman.py -l tinyCorners -p SearchAgent -a fn=bfs,prob=CornersProblem
 #python pacman.py -l mediumCorners -p SearchAgent -a fn=bfs,prob=CornersProblem
+python pacman.py -l tinyCorners -p AStarCornersAgent -z 0.5
+python pacman.py -l mediumCorners -p AStarCornersAgent -z 0.5
 #python pacman.py -l mediumCorners -p AStarCornersAgent -z 0.5
 # For debugging and viewing the search problem
-python pacman.py -l tinyCorners -p SearchAgent -a fn=bfs
+#python pacman.py -l tinyCorners -p SearchAgent -a fn=bfs
 #python pacman.py -l mediumCorners -p SearchAgent -a fn=ucs

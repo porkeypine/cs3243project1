@@ -194,7 +194,7 @@ def uniformCostSearch(problem):
     return []
     '''
 
-    Search the node of least total cost first.
+    # Search the node of least total cost first.
     from util import PriorityQueue,Counter
     # Keys: Explored States of the Pacman graph, Values: Minimum Cost of the State path
     explored = Counter()
@@ -210,6 +210,7 @@ def uniformCostSearch(problem):
         # represents current state of agent
         state, actions, cost = priorityQueue.pop()
         if problem.isGoalState(state):
+            print(cost)
             return actions
         # When a element is poped from the Priority Queue,
         # it is known to be of true cost from source to the node
@@ -255,6 +256,7 @@ def aStarSearch(problem, heuristic=nullHeuristic):
         state, actions, cost = priorityQueue.pop()
 
         if problem.isGoalState(state):
+            print(cost)
             return actions
         # When a element is poped from the Priority Queue,
         # it is known to be of true cost from source to the node
