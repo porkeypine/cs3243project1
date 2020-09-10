@@ -94,28 +94,25 @@ def depthFirstSearch(problem):
     # print "Start's successors:", problem.getSuccessors(problem.getStartState())
     # [((5, 4), 'South', 1), ((4, 5), 'West', 1)] for initial state.
 
-    # Perform DFS in a iterative process
-    # Explored set of values
-
     explored = Counter() # Explored States of the Pacman graph
-    stack = Stack()
-    # Store current position and state and previous actions
+    frontier = Stack()
+    # Store current position / state and previous actions
     # Start State is in Explored Set by default.
-    stack.push([problem.getStartState(),[]])
-    while not stack.isEmpty():
+    frontier.push([problem.getStartState(),[]])
+    while not frontier.isEmpty():
         # represents current state of agent
-        state, actions = stack.pop()
+        state, actions = frontier.pop()
         if problem.isGoalState(state):
             return actions
         if not explored[state]:
-            # When a element is poped from the stack, it is known to be first explored
+            # When a element is popped from the frontier, it is known to be first explored
             explored[state] = 1
             for nxt_state, action, _ in problem.getSuccessors(state):
                 # Prune new states that have already been explored
                 if explored[nxt_state] != 0:
                     continue
                 else:
-                    stack.push([nxt_state, actions + [action]])
+                    frontier.push([nxt_state, actions + [action]])
 
     # If problem is known to be unsolvable return a empty action set.
     return []
@@ -123,42 +120,81 @@ def depthFirstSearch(problem):
 
 def breadthFirstSearch(problem):
     """Search the shallowest nodes in the search tree first."""
-    from util import Queue
+    from util import Queue, Counter
     # print("Type of problem", problem)
     # print "Start:", problem.getStartState()
     # print "Is the start a goal?", problem.isGoalState(problem.getStartState())
     # print "Start's successors:", problem.getSuccessors(problem.getStartState())
     # [((5, 4), 'South', 1), ((4, 5), 'West', 1)] for initial state.
 
-    # Perform DFS in a iterative process
-    # Explored set of values
-
-    explored = set() # Explored States of the Pacman graph
-    queue = Queue()
+    explored = Counter() # Explored States of the Pacman graph
+    frontier = Queue()
     # Store current position and state and previous actions
     # Start State is in Explored Set by default.
-    queue.push([problem.getStartState(),[]])
-    while not queue.isEmpty():
+    frontier.push([problem.getStartState(),[]])
+    while not frontier.isEmpty():
         # represents current state of agent
-        state, actions = queue.pop()
-        if state in explored:
+        state, actions = frontier.pop()
+        if explored[state] == 1:
             continue
         if problem.isGoalState(state):
             return actions
-        # When a element is poped from the stack, it is known to be first explored
-        explored.add(state)
+        # When an element is popped from the stack, it is known to be first explored
+        explored[state] = 1
         for nxt_state, action, _ in problem.getSuccessors(state):
             # Prune new states that have already been explored
-            if nxt_state in explored:
+            if explored[nxt_state] == 1: #if nxt_state in explored:
                 continue
             else:
-                queue.push([nxt_state, actions + [action]])
+                frontier.push([nxt_state, actions + [action]])
 
     # If problem is known to be unsolvable return a empty action set.
     return []
 
 def uniformCostSearch(problem):
-    """Search the node of least total cost first."""
+    '''
+    # Hui Ling's solution: not currently working
+    from util import PriorityQueue
+
+    explored = set() # Explored States of the Pacman graph
+    frontier = PriorityQueue()
+
+    startState = problem.getStartState()
+    # Dictionary for storing g hat u of each state, i.e. min path cost of reaching u found so far
+    minPathCosts = {startState: 0}
+    # Dictionary for storing actions corresponding to each state
+    actionsDict = {startState: []}
+    # Frontier is a priority queue sorted by minPathCost
+    frontier.push(startState, 0)
+
+    while not frontier.isEmpty():
+        # represents current state of agent
+        state = frontier.pop()
+        if problem.isGoalState(state):
+            return actionsDict[state]
+        # When an element is popped from the stack, it is known to be first explored
+        explored.add(state)
+        for nxt_state, action, cost in problem.getSuccessors(state):
+            # Prune new states that have already been explored
+            if nxt_state in explored:
+                continue
+            else:
+                if nxt_state in minPathCosts:
+                    gHatV = minPathCosts[nxt_state] 
+                    gHatV = min(gHatV, minPathCosts[state] + cost)
+                    frontier.update(nxt_state, gHatV)
+                    actionsDict[nxt_state] = actionsDict[state] + [action]
+                else:
+                    gHatV = minPathCosts[state] + cost
+                    minPathCosts[nxt_state] = gHatV
+                    frontier.push(nxt_state, gHatV)
+                    actionsDict[nxt_state] = actionsDict[state] + [action]
+                    
+    # If problem is known to be unsolvable return a empty action set.
+    return []
+    '''
+
+    Search the node of least total cost first.
     from util import PriorityQueue,Counter
     # Keys: Explored States of the Pacman graph, Values: Minimum Cost of the State path
     explored = Counter()
