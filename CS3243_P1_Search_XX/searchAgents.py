@@ -388,7 +388,7 @@ def cornersHeuristic(state, problem):
     from itertools import permutations
     from util import manhattanDistance
     corners = set(problem.corners) # These are the corner coordinates
-    walls = problem.walls # These are the walls of the maze, as a Grid (game.py)
+    # walls = problem.walls # These are the walls of the maze, as a Grid (game.py)
 
     "*** YOUR CODE HERE ***"
     currentPos = state[0]

@@ -88,11 +88,6 @@ def depthFirstSearch(problem):
     print "Start's successors:", problem.getSuccessors(problem.getStartState())
     """
     from util import Stack,Counter
-    # print("Type of problem", problem)
-    # print "Start:", problem.getStartState()
-    # print "Is the start a goal?", problem.isGoalState(problem.getStartState())
-    # print "Start's successors:", problem.getSuccessors(problem.getStartState())
-    # [((5, 4), 'South', 1), ((4, 5), 'West', 1)] for initial state.
 
     explored = Counter() # Explored States of the Pacman graph
     frontier = Stack()
@@ -121,12 +116,6 @@ def depthFirstSearch(problem):
 def breadthFirstSearch(problem):
     """Search the shallowest nodes in the search tree first."""
     from util import Queue, Counter
-    # print("Type of problem", problem)
-    # print "Start:", problem.getStartState()
-    # print "Is the start a goal?", problem.isGoalState(problem.getStartState())
-    # print "Start's successors:", problem.getSuccessors(problem.getStartState())
-    # [((5, 4), 'South', 1), ((4, 5), 'West', 1)] for initial state.
-
     explored = Counter() # Explored States of the Pacman graph
     frontier = Queue()
     # Store current position and state and previous actions

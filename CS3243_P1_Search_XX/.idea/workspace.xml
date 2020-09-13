@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8722270f-6be6-4546-b287-880f43aba18c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/search.py" beforeDir="false" afterPath="$PROJECT_DIR$/search.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/searchAgents.py" beforeDir="false" afterPath="$PROJECT_DIR$/searchAgents.py" afterDir="false" />
     </list>
@@ -73,7 +74,8 @@
       <workItem from="1598860341308" duration="6272000" />
       <workItem from="1599064133608" duration="1264000" />
       <workItem from="1599066006024" duration="943000" />
-      <workItem from="1599719017354" duration="6091000" />
+      <workItem from="1599719017354" duration="6352000" />
+      <workItem from="1600018502387" duration="257000" />
     </task>
     <servers />
   </component>
@@ -94,7 +96,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+    <MESSAGE value="commit completion of tasks" />
+    <MESSAGE value="commit completion of tasks 1-6&#10;To note is that BFS and DFS of the assignment task are both supposed to use unoptimised where termination only happens prior to the removal of the node for expansion of frontier" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit completion of tasks 1-6&#10;To note is that BFS and DFS of the assignment task are both supposed to use unoptimised where termination only happens prior to the removal of the node for expansion of frontier" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1864" y="202" width="1071" height="724" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598683099239">
